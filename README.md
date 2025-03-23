@@ -18,7 +18,7 @@ Ensure you have the following installed on your system:
 
 🚀 Setup Instructions
 1. **Clone the Repository**
-   git clone https://github.com/yourusername/smart-assistant.git
+   git clone https://github.com/vaidikkumarpatel410/smart-assistant.git
    cd smart-assistant
 2. **Create a Virtual Environment (Optional but Recommended)**
    ```bash
