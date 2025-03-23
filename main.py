@@ -129,10 +129,10 @@ if __name__ == "__main__":
         
         elif "app" in query.lower():
             apps=[
-                ["facetime","/System/Applications/Factime.app"],
-                ["spotify","/Applications/Spotify.app"],
-                ["google","/Applications/Google Chrome.app"],
-                ["notes","/System/Applications/Notes.app"]
+                ["facetime","/System/Applications/Factime.app/PATH"],
+                ["spotify","/Applications/Spotify.app/PATH"],
+                ["google","/Applications/Google Chrome.app/PATH"],
+                ["notes","/System/Applications/Notes.app/PATH"]
             ]
             for app in apps:
                 if app[0] in query.lower():
