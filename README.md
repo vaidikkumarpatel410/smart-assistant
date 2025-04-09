@@ -1,60 +1,65 @@
-# 🤖 Smart Voice Assistant
+🤖 Smart Voice Assistant
 
-## 📌 Overview
-This is a Python-based smart voice assistant that can recognize voice commands, process them, and provide responses using AI models. It is designed to run on macOS and utilizes speech recognition, text-to-speech, and natural language processing.
+📌 Overview
 
-## ✨ Features
-- 🎤 **Voice Command Recognition**: Converts spoken input into text.
-- 🧠 **AI-Powered Responses**: Uses an AI model to generate relevant answers.
-- 🔊 **Text-to-Speech (TTS)**: Reads responses aloud using gTTS.
-- ⚡ **Lightweight and Efficient**: Optimized for running on macOS with minimal resources.
+Smart Voice Assistant is a GUI-based voice-controlled Python assistant built using Tkinter. It processes spoken commands, performs tasks like opening apps or websites, fetching weather updates, and chatting via AI models like Together AI and Forefront AI. Optimized for macOS, it offers a sleek chat-style interface where user queries appear on the right and assistant responses on the left.
 
-## ⚙️ Installation
-### 📋 Prerequisites
-Ensure you have the following installed on your system:
-- 🐍 Python 3.x
-- 💾 Virtual Environment (Recommended)
-- 📦 Required dependencies listed in `requirements.txt`
+✨ Features
 
+🎤 Voice Recognition: Converts your speech to text using speech_recognition.
+🧠 AI-Powered Chat: Uses Together AI (Mixtral) and Forefront AI for intelligent responses.
+🌦️ Weather Updates: Fetches real-time weather using WeatherAPI.
+🌐 Web & App Launcher: Opens common websites and system applications via voice.
+🔊 System TTS Output: Uses macOS's say command for vocal responses.
+💬 Chat UI: Tkinter interface shows a left-right aligned conversation flow.
+🎵 Music Playback: Plays a local song file with a voice command.
+🧪 AI Output Storage: Saves AI responses to text files.
+⚙️ Installation
+
+📋 Prerequisites
+Ensure the following are installed:
+
+🐍 Python 3.x
+📦 Dependencies from requirements.txt
+💾 Recommended: Virtual environment setup
 🚀 Setup Instructions
-1. **Clone the Repository**
-   git clone https://github.com/vaidikkumarpatel410/smart-assistant.git
-   cd smart-assistant
-2. **Create a Virtual Environment (Optional but Recommended)**
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On macOS/Linux
-   venv\Scripts\activate  # On Windows
-   ```
-3. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+Clone the repository
+git clone https://github.com/vaidikkumarpatel410/smart-assistant.git
+cd smart-assistant
+Create a virtual environment (optional)
+python3 -m venv venv
+source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate     # On Windows
+Install dependencies
+pip install -r requirements.txt
+🎙️ Usage
 
-## 🎙️ Usage
-Run the assistant by executing:
-```bash
+Run the assistant:
+
 python main.py
-```
-Speak into your microphone when prompted, and the assistant will respond accordingly.
+Click the Speak button and issue your command. Responses will be spoken and shown in the GUI.
 
-## 🛠️ Configuration
-- 🔑 **API Keys & Credentials**: If your project uses API keys (e.g., for GPT models), store them securely in a `config.py` file or an `.env` file and ensure it is not included in version control (`.gitignore`).
+🔑 Configuration
 
-## 📂 File Structure
-```
+Add your API keys to a config.py file:
+weatherapi = "YOUR_WEATHER_API_KEY"
+ff_apikey = "YOUR_FORE_FRONT_API_KEY"
+together_ai_api_key = "YOUR_TOGETHER_API_KEY"
+Make sure config.py is in your .gitignore.
+📂 Project Structure
+
 smart-assistant/
-│── main.py                # Main script
-│── forefront_ai_test.py   # AI integration test
-│── requirements.txt       # Dependencies
-│── README.md              # Project documentation
-│── .gitignore             # Ignore sensitive files
-```
+│
+├── main.py             # Main GUI application
+├── config.py           # API keys (excluded from repo)
+├── requirements.txt    # Required packages
+├── README.md           # This file
+├── ffai/               # Saved AI responses (auto-created)
+└── .gitignore          # Hides sensitive files
+🙌 Acknowledgments
 
-
-## 🙌 Acknowledgments
-- 🎉 Fore Front AI (For AI model)
-- 🎉 Together AI (For AI model)
-- 🗣️ gTTS (Google Text-to-Speech)
-- 🎧 SpeechRecognition Library
-
+🧠 Forefront AI
+🤝 Together AI
+🗣️ SpeechRecognition
+🔊 macOS say command for voice output
+🌦️ WeatherAPI
